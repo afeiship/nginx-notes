@@ -16,4 +16,5 @@ cd /usr/local/nginx/conf/vhost
 ## OR
 ```conf
 nginx -s reload
+nginx -t
 ```
