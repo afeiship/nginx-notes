@@ -42,6 +42,14 @@ make
 sudo make install
 ```
 
+## start
+- https://www.cnblogs.com/niuben/p/13813467.html
+
+```shell
+cd /usr/local/nginx
+sudo /usr/local/nginx/nginx -c nginx.conf
+```
+
 ## uninstall
 > 网上提到的 ❯ sudo make uninstall
 > make: *** No rule to make target `uninstall'.  Stop.
