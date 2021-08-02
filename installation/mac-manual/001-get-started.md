@@ -1,5 +1,10 @@
 # get-started
 
+## changed 核心路径改变
+> 优点: 不需要用 sudo 
+- /usr/local/nginx/
+- /Users/aric.zheng/github/nginx/bin
+
 ## resources
 - https://blog.csdn.net/tanlovezhao/article/details/109286311
 - http://nginx.org/en/download.html
@@ -11,10 +16,10 @@
 
 ## paths
 ```shell
-/Users/aric.zheng/github/soft/nginx-1.18.0
-/Users/aric.zheng/github/soft/deps/openssl-1.1.1g
-/Users/aric.zheng/github/soft/deps/pcre-8.44
-/Users/aric.zheng/github/soft/deps/zlib-1.2.11
+/Users/aric.zheng/github/nginx/nginx-1.18.0
+/Users/aric.zheng/github/nginx/deps/openssl-1.1.1g
+/Users/aric.zheng/github/nginx/deps/pcre-8.44
+/Users/aric.zheng/github/nginx/deps/zlib-1.2.11
 ```
 
 ## installation
@@ -23,13 +28,13 @@
 
 ```shell
 # enter dir
-cd /Users/aric.zheng/github/soft/nginx-1.18.0
+cd /Users/aric.zheng/github/nginx/nginx-1.18.0
 
 # config
 ./configure \
-    --sbin-path=/usr/local/nginx/nginx  \
-    --conf-path=/usr/local/nginx/nginx.conf \
-    --pid-path=/usr/local/nginx/nginx.pid \
+    --sbin-path=/Users/aric.zheng/github/nginx/bin/nginx  \
+    --conf-path=/Users/aric.zheng/github/nginx/bin/nginx.conf \
+    --pid-path=/Users/aric.zheng/github/nginx/bin/nginx.pid \
     --with-http_ssl_module  \
     --with-pcre=../deps/pcre-8.44 \
     --with-zlib=../deps/zlib-1.2.11 \
@@ -46,8 +51,8 @@ sudo make install
 - https://www.cnblogs.com/niuben/p/13813467.html
 
 ```shell
-cd /usr/local/nginx
-sudo /usr/local/nginx/nginx -c nginx.conf
+cd /Users/aric.zheng/github/nginx/bin
+sudo /Users/aric.zheng/github/nginx/bin/nginx -c nginx.conf
 ```
 
 ## uninstall
@@ -55,15 +60,15 @@ sudo /usr/local/nginx/nginx -c nginx.conf
 > make: *** No rule to make target `uninstall'.  Stop.
 
 ```shell
-sudo rm -f -R /usr/local/nginx && rm -f /usr/local/sbin/nginx
+sudo rm -f -R /Users/aric.zheng/github/nginx/bin && rm -f /usr/local/sbin/nginx
 ```
 
 
 ## commands
 ```shell
-sudo /usr/local/nginx/nginx -V
-sudo /usr/local/nginx/nginx -t
-sudo /usr/local/nginx/nginx -s reload
-sudo /usr/local/nginx/nginx -s restart
-sudo /usr/local/nginx/nginx -s stop
+sudo /Users/aric.zheng/github/nginx/bin/nginx -V
+sudo /Users/aric.zheng/github/nginx/bin/nginx -t
+sudo /Users/aric.zheng/github/nginx/bin/nginx -s reload
+sudo /Users/aric.zheng/github/nginx/bin/nginx -s restart
+sudo /Users/aric.zheng/github/nginx/bin/nginx -s stop
 ```
