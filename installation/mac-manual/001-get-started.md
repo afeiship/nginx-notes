@@ -1,10 +1,5 @@
 # get-started
 
-## changed 核心路径改变
-> 优点: 不需要用 sudo 
-- /usr/local/nginx/
-- /Users/aric.zheng/github/nginx/bin
-
 ## resources
 - https://blog.csdn.net/tanlovezhao/article/details/109286311
 - http://nginx.org/en/download.html
@@ -32,9 +27,9 @@ cd /Users/aric.zheng/github/nginx/nginx-1.18.0
 
 # config
 ./configure \
-    --sbin-path=/Users/aric.zheng/github/nginx/bin/nginx  \
-    --conf-path=/Users/aric.zheng/github/nginx/bin/nginx.conf \
-    --pid-path=/Users/aric.zheng/github/nginx/bin/nginx.pid \
+    --sbin-path=/usr/local/nginx/nginx  \
+    --conf-path=/usr/local/nginx/nginx.conf \
+    --pid-path=/usr/local/nginx/nginx.pid \
     --with-http_ssl_module  \
     --with-pcre=../deps/pcre-8.44 \
     --with-zlib=../deps/zlib-1.2.11 \
@@ -52,7 +47,7 @@ sudo make install
 
 ```shell
 cd /Users/aric.zheng/github/nginx/bin
-sudo /Users/aric.zheng/github/nginx/bin/nginx -c nginx.conf
+sudo /usr/local/nginx/nginx -c nginx.conf
 ```
 
 ## uninstall
@@ -66,9 +61,9 @@ sudo rm -f -R /Users/aric.zheng/github/nginx/bin && rm -f /usr/local/sbin/nginx
 
 ## commands
 ```shell
-sudo /Users/aric.zheng/github/nginx/bin/nginx -V
-sudo /Users/aric.zheng/github/nginx/bin/nginx -t
-sudo /Users/aric.zheng/github/nginx/bin/nginx -s reload
-sudo /Users/aric.zheng/github/nginx/bin/nginx -s restart
-sudo /Users/aric.zheng/github/nginx/bin/nginx -s stop
+sudo /usr/local/nginx/nginx -V
+sudo /usr/local/nginx/nginx -t
+sudo /usr/local/nginx/nginx -s reload
+sudo /usr/local/nginx/nginx -s restart
+sudo /usr/local/nginx/nginx -s stop
 ```
