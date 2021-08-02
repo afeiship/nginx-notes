@@ -4,6 +4,7 @@
 - https://blog.csdn.net/tanlovezhao/article/details/109286311
 - http://nginx.org/en/download.html
 - http://nginx.org/en/docs/configure.html
+- https://unix.stackexchange.com/questions/22708/how-to-uninstall-nginx-installed-from-source
 
 ## packages
 - http://nginx.org/download/nginx-1.18.0.tar.gz
